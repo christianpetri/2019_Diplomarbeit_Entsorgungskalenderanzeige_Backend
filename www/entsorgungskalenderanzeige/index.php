@@ -12,7 +12,7 @@ $result = $DB->getCalendarEntries();
 $html = '<table class="result">';
 // header row
 $html .= '<tr>';
-$html .= '<th> Date </th> <th> Type </th> <th> Circle </th>';
+$html .= '<th> Datum </th> <th> Typ </th> <th> Kreis </th>';
 $html .= '</tr>';
 
 // data rows
