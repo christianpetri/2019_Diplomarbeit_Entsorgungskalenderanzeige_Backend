@@ -1,7 +1,8 @@
 <?php
-define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"]);
-include DOCUMENT_ROOT . "/../database/connect.php";
-include DOCUMENT_ROOT . "/../common/common.php";
+
+include_once "../common.php";
+include_once "../backend.php";
+include_once "../plain/logic.php";
 
 printHeader("Entsorgungskalenderanzeige");
 ?>
@@ -38,32 +39,9 @@ echo print_r($DB->getHelloWorld());
     </div>
     <div>---------------------- Start-------------</div>
 <?php
-
 if (isset($_GET["circleId"])) {
-    $circle_id = $_GET["circleId"];
-    if ($circle_id != "") {
-
-
-        $result = $DB->getPlainTextStringForMicroprocessor($circle_id);
-        echo "How it is received from the database:<br/>";
-        echo print_r($result);
-        ?>
-        <br/>
-        <div>How the microcontroller receives it:</div>
-        <?php
-        $html = "1"; //to start the sequence
-        $html .= htmlspecialchars($result[0]['greenWaste']);
-        $html .= htmlspecialchars($result[0]['cardboard']);
-        $html .= htmlspecialchars($result[0]['garbageAndBulkyGoods']);
-        $html .= htmlspecialchars($result[0]['metal']);
-        $html .= htmlspecialchars($result[0]['paper']);
-        echo $html;
-    }
-} else {
-    ?>
-    <div>No circleId was provided, therefore no call to the database was made.</div>
-    <div>How the microcontroller receives it:</div>
-    <?php
+    echo getPlainTextStringForMicroprocessor($DB, $_GET["circleId"]);
+} else{
     echo "200000";
 }
 ?>

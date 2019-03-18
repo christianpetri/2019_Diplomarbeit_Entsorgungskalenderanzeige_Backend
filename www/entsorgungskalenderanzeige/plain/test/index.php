@@ -6,9 +6,7 @@
  * Time: 11:08
  */
 
-
-define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"]);
-include DOCUMENT_ROOT . "/../database/connect.php";
+include_once "../../backend.php";
 
 header("Content-Type: text/plain");
 
@@ -16,13 +14,9 @@ $circle_id = "";
 
 if (isset($_GET["circleId"])) {
     $circle_id = $_GET["circleId"];
-}
-
-if($circle_id != "") {
-    $result = $DB->getCheckIfCircleIdExists($circle_id);
-    $check = htmlspecialchars($result[0]['result']);
-    if($check){
-        echo "1";
+    if($circle_id != "") {
+        $result = $DB->getCheckIfCircleIdExists($circle_id);
+        echo htmlspecialchars($result[0]['result']);
     } else{
         echo "0";
     }

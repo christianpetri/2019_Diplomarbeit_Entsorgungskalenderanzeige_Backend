@@ -5,26 +5,15 @@
  * Time: 13:59
  */
 
-define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"]);
-include DOCUMENT_ROOT . "/../database/connect.php";
+include_once "../backend.php";
+include_once "logic.php";
 
 header("Content-Type: text/plain");
 
-$circle_id = "";
 
 if (isset($_GET["circleId"])) {
-    $circle_id = $_GET["circleId"];
-}
-
-if ($circle_id != "") {
-    $result = $DB->getPlainTextStringForMicroprocessor($circle_id);
-    $html = "1"; //to start the sequence
-    $html .= htmlspecialchars($result[0]['greenWaste']);
-    $html .= htmlspecialchars($result[0]['cardboard']);
-    $html .= htmlspecialchars($result[0]['garbageAndBulkyGoods']);
-    $html .= htmlspecialchars($result[0]['metal']);
-    $html .= htmlspecialchars($result[0]['paper']);
-    echo $html;
-} else {
+    echo getPlainTextStringForMicroprocessor($DB, $_GET["circleId"]);
+} else{
     echo "200000";
 }
+

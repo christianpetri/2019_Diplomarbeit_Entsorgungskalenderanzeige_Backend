@@ -1,7 +1,7 @@
 <?php
-define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"]);
-include DOCUMENT_ROOT . "/../database/connect.php";
-include DOCUMENT_ROOT . "/../common/common.php";
+
+include_once "backend.php";
+include_once "common.php";
 
 printHeader("Entsorgungskalender");
 ?>
