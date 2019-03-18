@@ -1,8 +1,8 @@
 <?php
-
 include_once "../common.php";
 include_once "../backend.php";
 include_once "../plain/logic.php";
+$DB = new HandelDB();
 
 printHeader("Entsorgungskalenderanzeige");
 ?>
@@ -39,11 +39,16 @@ echo print_r($DB->getHelloWorld());
     </div>
     <div>---------------------- Start-------------</div>
 <?php
-if (isset($_GET["circleId"])) {
-    echo getPlainTextStringForMicroprocessor($DB, $_GET["circleId"]);
-} else{
-    echo "200000";
-}
+$result =
+    htmlspecialchars
+    (
+        getPlainTextStringForMicroprocessor
+        (
+            $DB,
+            isset($_GET["circleId"]) ? $_GET["circleId"] : ""
+        )
+    );
+echo $result;
 ?>
     <div>---------------------- End-------------</div>
 <?php

@@ -8,5 +8,5 @@ $conn = [
     'host' => 'localhost',
     'user' => 'db_user',
     'pass' => 'secret',
-    'base' => 'overkill'
+    'base' => 'mySchemaName'
 ];

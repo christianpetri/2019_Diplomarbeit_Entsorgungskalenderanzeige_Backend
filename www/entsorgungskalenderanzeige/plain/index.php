@@ -8,12 +8,15 @@
 include_once "../backend.php";
 include_once "logic.php";
 
+$DB = new HandelDB();
+
 header("Content-Type: text/plain");
 
 
-if (isset($_GET["circleId"])) {
-    echo getPlainTextStringForMicroprocessor($DB, $_GET["circleId"]);
-} else{
-    echo "200000";
-}
-
+echo htmlspecialchars(
+    getPlainTextStringForMicroprocessor
+    (
+        $DB,
+        isset($_GET["circleId"]) ? $_GET["circleId"] : ""
+    )
+);

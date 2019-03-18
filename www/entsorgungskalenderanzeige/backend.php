@@ -6,10 +6,11 @@
 class HandelDB
 {
 
+    private $_db = null;
     /**
      * @return bool|PDO
      */
-    private function connectToDatabase()
+    public function __construct()
     {
         if (!file_exists($_SERVER["DOCUMENT_ROOT"] . '/connect.php')) {
             return false;
@@ -23,7 +24,8 @@ class HandelDB
             try {
                 $conn = new PDO("mysql:host={$connection['host']};dbname={$connection['base']};charset=utf8mb4", $connection['user'], $connection['password']);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                return $conn;
+                $this->_db = $conn;
+                return true;
             } catch (PDOException $e) {
                 echo "Connection failed: " . $e->getMessage();
             }
@@ -42,8 +44,7 @@ class HandelDB
     private function executeQuery($sql)
     {
         try {
-            $connectionToDB = $this->connectToDatabase();
-            $stmt = $connectionToDB->prepare($sql);
+            $stmt = $this->_db->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -90,8 +91,7 @@ class HandelDB
     public function getPlainTextStringForMicroprocessorFromDB($circle_id)
     {
         try {
-            $connectionToDB = $this->connectToDatabase();
-            $stmt = $connectionToDB->prepare(' 
+            $stmt = $this->_db->prepare(' 
                 SELECT garbage_type_id as garbageTypeId
                 FROM garbage_collection_calendar			  
                 WHERE
@@ -119,8 +119,8 @@ class HandelDB
     public function getCheckIfCircleIdExists($circle_id)
     {
         try {
-            $connectionToDB = $this->connectToDatabase();
-            $stmt = $connectionToDB->prepare('
+
+            $stmt = $this->_db->prepare('
                 SELECT count(circle_id) as result
                 FROM circle
                 WHERE circle_id = :circle_id 
@@ -134,7 +134,4 @@ class HandelDB
         }
         return null;
     }
-
 }
-
-$DB = new HandelDB;

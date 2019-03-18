@@ -11,17 +11,19 @@
  * @param $circle_id
  * @return string
  */
-function getPlainTextStringForMicroprocessor($DB, $circle_id){
+function getPlainTextStringForMicroprocessor($DB, $circle_id = ''){
     if ($circle_id != "") {
         /** @var HandelDB $DB */
         $result = $DB->getPlainTextStringForMicroprocessorFromDB($circle_id);
 
+        //1 Grüngut, 2 Karton, 3 Kehricht und Sperrgut, 4 Metall und 5 Papier
         $isGarbageDue = array(1 => false, 2 => false, 3 => false, 4 => false, 5 => false);
+
         foreach ($result as $key => $value) {
             $isGarbageDue[$result[$key]['garbageTypeId']] = true;
         }
 
-        //star
+        //start
         $html = "1"; //to start the sequence
         for ($i = 1; $i < 6; $i++) {
             $html .= htmlspecialchars($isGarbageDue[$i] ? "1" : "0");
