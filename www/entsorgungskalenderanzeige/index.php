@@ -3,6 +3,8 @@
 include_once "backend.php";
 include_once "common.php";
 
+$DB = new HandelDB();
+
 printHeader("Entsorgungskalender");
 ?>
 <h1>Entsorgungskalender</h1>

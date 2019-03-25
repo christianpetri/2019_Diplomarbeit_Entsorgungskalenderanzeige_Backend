@@ -25,13 +25,13 @@ echo print_r($DB->getHelloWorld());
         <br/>The following 0 and 1s are "booleans" to indicate, if the waste can be put outside
     </div>
 
-    <h3>If you <b>don't</b> provide the circleId. </h3>
+    <h3>If you <strong>don't</strong> provide the circleId. </h3>
     <div>Expected Result: 200000</div>
 
     <h3>If you provide the circleId.</h3>
     <div>
-        Expected Result: (Note: the <b> => 0</b> changes accordingly to 1, if it is time to put the waste outside.)
-    </div>
+    </div>        Expected Result: (Note: the <strong> => 0</strong> changes accordingly to 1, if it is time to put the waste outside.)
+
     <div>
         How the Backend get is from the database: Array ( [0] => Array ( [greenWaste] => 0 [cardboard] => 0
         [garbageAndBulkyGoods] => 0 [metal] => 0 [paper] => 0 ) ) 1 <br/>
