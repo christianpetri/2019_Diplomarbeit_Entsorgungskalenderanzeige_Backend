@@ -5,10 +5,11 @@
  * Time: 13:59
  */
 
-include_once "../backend.php";
 include_once "logic.php";
+include_once "../CalendarRepository.php";
+include_once "../CalendarDAO.php";
 
-$DB = new HandelDB();
+$DB = new CalendarRepository(new CalendarDAO());
 
 header("Content-Type: text/plain");
 

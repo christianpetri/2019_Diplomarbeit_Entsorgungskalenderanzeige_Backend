@@ -6,7 +6,10 @@
  * Time: 11:08
  */
 
-include_once "../../backend.php";
+include_once "../../CalendarRepository.php";
+include_once "../../CalendarDAO.php";
+
+$DB = new CalendarRepository(new CalendarDAO());
 
 header("Content-Type: text/plain");
 

@@ -1,8 +1,11 @@
 <?php
 include_once "../common.php";
-include_once "../backend.php";
 include_once "../plain/logic.php";
-$DB = new HandelDB();
+
+include_once "../CalendarRepository.php";
+include_once "../CalendarDAO.php";
+
+$DB = new CalendarRepository(new CalendarDAO());
 
 printHeader("Entsorgungskalenderanzeige");
 ?>

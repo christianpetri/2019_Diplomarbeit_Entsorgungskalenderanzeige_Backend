@@ -1,20 +1,24 @@
 <?php
-
 /**
- * Class HandelDB
+ * Created by PhpStorm.
+ * User: -
+ * Date: 25.03.2019
+ * Time: 10:41
  */
-class HandelDB
-{
 
-    private $_db = null;
+class CalendarDAO
+{
+    private $_pdo = null;
+
     /**
      * @return bool|PDO
      */
     public function __construct()
     {
-        if (!file_exists($_SERVER["DOCUMENT_ROOT"] . '/connect.php')) {
-            return false;
-        }
+        /**
+         * if (!file_exists($_SERVER["DOCUMENT_ROOT"] . '/connect.php')) {
+         * return false;
+         * }*/
         include_once 'connect.php';
         if (isset($connection['host']) && !empty($connection['host'])
             && isset($connection['base']) && !empty($connection['base'])
@@ -24,7 +28,7 @@ class HandelDB
             try {
                 $conn = new PDO("mysql:host={$connection['host']};dbname={$connection['base']};charset=utf8mb4", $connection['user'], $connection['password']);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $this->_db = $conn;
+                $this->_pdo = $conn;
                 return true;
             } catch (PDOException $e) {
                 echo "Connection failed: " . $e->getMessage();
@@ -44,7 +48,7 @@ class HandelDB
     private function executeQuery($sql)
     {
         try {
-            $stmt = $this->_db->prepare($sql);
+            $stmt = $this->_pdo->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -91,7 +95,7 @@ class HandelDB
     public function getPlainTextStringForMicroprocessorFromDB($circle_id)
     {
         try {
-            $stmt = $this->_db->prepare(' 
+            $stmt = $this->_pdo->prepare(' 
                 SELECT garbage_type_id as garbageTypeId
                 FROM garbage_collection_calendar			  
                 WHERE
@@ -119,8 +123,7 @@ class HandelDB
     public function getCheckIfCircleIdExists($circle_id)
     {
         try {
-
-            $stmt = $this->_db->prepare('
+            $stmt = $this->_pdo->prepare('
                 SELECT count(circle_id) as result
                 FROM circle
                 WHERE circle_id = :circle_id 

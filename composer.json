@@ -9,12 +9,15 @@
       "email": "email@example.com"
     }
   ],
+  "require": {
+    "ext-pdo": "*"
+  },
   "require-dev": {
     "phpunit/phpunit": "^8"
   },
   "autoload": {
     "classmap": [
-      "www/entsorgungskalenderanzeige/"
+      "www/entsorgungskalenderanzeige"
     ]
   }
 }

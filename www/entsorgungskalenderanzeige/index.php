@@ -1,14 +1,15 @@
 <?php
-
-include_once "backend.php";
 include_once "common.php";
 
-$DB = new HandelDB();
+include_once "CalendarRepository.php";
+include_once "CalendarDAO.php";
+
+$DB = new CalendarRepository(new CalendarDAO());
 
 printHeader("Entsorgungskalender");
 ?>
-<h1>Entsorgungskalender</h1>
-<h2>Die nächsten 30 Kalendereinträge</h2>
+    <h1>Entsorgungskalender</h1>
+    <h2>Die nächsten 30 Kalendereinträge</h2>
 <?php
 $result = $DB->getCalendarEntries();
 $html = '<table class="result">';

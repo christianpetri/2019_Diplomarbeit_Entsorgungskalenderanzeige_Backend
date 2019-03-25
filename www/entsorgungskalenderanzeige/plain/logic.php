@@ -13,7 +13,7 @@
  */
 function getPlainTextStringForMicroprocessor($DB, $circle_id = ''){
     if ($circle_id != "") {
-        /** @var HandelDB $DB */
+        /** @var CalendarRepository $DB */
         $result = $DB->getPlainTextStringForMicroprocessorFromDB($circle_id);
 
         //1 Grüngut, 2 Karton, 3 Kehricht und Sperrgut, 4 Metall und 5 Papier
