@@ -19,6 +19,7 @@
         <directory suffix=".php">www/entsorgungskalenderanzeige</directory>
         <exclude>
             <file>www/entsorgungskalenderanzeige/connect.sample.php</file>
+            <directory>vendor</directory>
         </exclude>
     </whitelist>
 </filter>

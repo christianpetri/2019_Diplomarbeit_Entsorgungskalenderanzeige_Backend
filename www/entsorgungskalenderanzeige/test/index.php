@@ -18,7 +18,7 @@ printHeader("Entsorgungskalenderanzeige");
     </div>
     <div>---------------------- Start-------------</div>
 <?php
-echo print_r($DB->getHelloWorld());
+print htmlspecialchars(print_r($DB->getHelloWorld()));
 ?>
     <div>---------------------- End-------------</div>
     <h2>/plain</h2>
@@ -48,10 +48,10 @@ $result =
         getPlainTextStringForMicroprocessor
         (
             $DB,
-            isset($_GET["circleId"]) ? $_GET["circleId"] : ""
+            isset($_GET["circleId"]) ? filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS) : ""
         )
     );
-echo $result;
+print $result;
 ?>
     <div>---------------------- End-------------</div>
 <?php

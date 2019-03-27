@@ -16,7 +16,7 @@ class CalendarRepositoryTest extends TestCase
     /**
      * @var
      */
-    protected $db;
+    protected $_db;
 
     /**
      * @throws ReflectionException
@@ -72,7 +72,7 @@ class CalendarRepositoryTest extends TestCase
             ->willReturn('1');
 
         try {
-            $this->db = new CalendarRepository($_dao);
+            $this->_db = new CalendarRepository($_dao);
         } catch (Error $e) {
             echo $e;
         }
@@ -83,7 +83,7 @@ class CalendarRepositoryTest extends TestCase
      */
     public function testGetCheckIfCircleIdExists()
     {
-        $repo = new CalendarRepository($this->db);
+        $repo = new CalendarRepository($this->_db);
 
         $event = $repo->getCheckIfCircleIdExists(1);
 
@@ -95,7 +95,7 @@ class CalendarRepositoryTest extends TestCase
      */
     public function testGetCalendarEntries()
     {
-        $repo = new CalendarRepository($this->db);
+        $repo = new CalendarRepository($this->_db);
 
         $event = $repo->getCalendarEntries();
 
@@ -134,7 +134,7 @@ class CalendarRepositoryTest extends TestCase
     public function testGetHelloWorld()
     {
 
-        $repo = new CalendarRepository($this->db);
+        $repo = new CalendarRepository($this->_db);
 
         $event = $repo->getHelloWorld();
 
@@ -147,7 +147,7 @@ class CalendarRepositoryTest extends TestCase
     public function testGetPlainTextStringForMicroprocessorFromDB()
     {
 
-        $repo = new CalendarRepository($this->db);
+        $repo = new CalendarRepository($this->_db);
 
         $event = $repo->getPlainTextStringForMicroprocessorFromDB(1);
 

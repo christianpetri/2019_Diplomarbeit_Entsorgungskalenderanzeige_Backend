@@ -7,14 +7,14 @@
  */
 
 /**
- * @param $DB
+ * @param $database
  * @param $circle_id
  * @return string
  */
-function getPlainTextStringForMicroprocessor($DB, $circle_id = ''){
+function getPlainTextStringForMicroprocessor($database, $circle_id = ''){
     if ($circle_id != "") {
-        /** @var CalendarRepository $DB */
-        $result = $DB->getPlainTextStringForMicroprocessorFromDB($circle_id);
+        /** @var CalendarRepository $database */
+        $result = $database->getPlainTextStringForMicroprocessorFromDB($circle_id);
 
         //1 Grüngut, 2 Karton, 3 Kehricht und Sperrgut, 4 Metall und 5 Papier
         $isGarbageDue = array(1 => false, 2 => false, 3 => false, 4 => false, 5 => false);

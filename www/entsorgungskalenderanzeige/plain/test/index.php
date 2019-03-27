@@ -16,13 +16,13 @@ header("Content-Type: text/plain");
 $circle_id = "";
 
 if (isset($_GET["circleId"])) {
-    $circle_id = $_GET["circleId"];
+    $circle_id = filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS);
     if($circle_id != "") {
         $result = $DB->getCheckIfCircleIdExists($circle_id);
-        echo htmlspecialchars($result[0]['result']);
+        print htmlspecialchars($result[0]['result']);
     } else{
-        echo "0";
+        print "0";
     }
 } else {
-    echo "0";
+    print "0";
 }

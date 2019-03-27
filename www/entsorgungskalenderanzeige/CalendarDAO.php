@@ -31,7 +31,7 @@ class CalendarDAO
                 $this->_pdo = $conn;
                 return true;
             } catch (PDOException $e) {
-                echo "Connection failed: " . $e->getMessage();
+                print "Connection failed: " . htmlspecialchars($e->getMessage());
             }
         }
         // Do not keep database credentials in memory.
@@ -52,7 +52,7 @@ class CalendarDAO
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            print $e->getMessage();
         }
         return null;
     }
@@ -110,7 +110,7 @@ class CalendarDAO
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            print htmlspecialchars($e->getMessage());
         }
         return null;
     }
@@ -133,7 +133,7 @@ class CalendarDAO
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            print htmlspecialchars($e->getMessage());
         }
         return null;
     }

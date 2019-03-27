@@ -9,15 +9,15 @@ include_once "logic.php";
 include_once "../CalendarRepository.php";
 include_once "../CalendarDAO.php";
 
-$DB = new CalendarRepository(new CalendarDAO());
+$database = new CalendarRepository(new CalendarDAO());
 
 header("Content-Type: text/plain");
 
 
-echo htmlspecialchars(
+print htmlspecialchars(
     getPlainTextStringForMicroprocessor
     (
-        $DB,
+        $database,
         isset($_GET["circleId"]) ? $_GET["circleId"] : ""
     )
 );

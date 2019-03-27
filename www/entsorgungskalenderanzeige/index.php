@@ -28,5 +28,5 @@ foreach ($result as $key => $value) {
 }
 // finish table and return it
 $html .= '</table>';
-echo $html;
+print $html;
 printFooter();
