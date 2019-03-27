@@ -1,5 +1,9 @@
 <?php
 date_default_timezone_set('Europe/London');
+
+/**
+ * @param $title
+ */
 function printHeader($title){
 ?><!doctype html>
 <html lang="en">
@@ -12,6 +16,9 @@ function printHeader($title){
 <body>
 <?php
 }
+/**
+ *
+ */
 function printFooter(){
 ?></body>
 </html>
