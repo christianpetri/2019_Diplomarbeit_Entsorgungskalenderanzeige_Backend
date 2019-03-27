@@ -1,11 +1,12 @@
 <?php
 include_once "../common.php";
-include_once "../plain/logic.php";
+include_once "../plain/MicroprocessorLogic.php";
 
 include_once "../CalendarRepository.php";
 include_once "../CalendarDAO.php";
 
 $DB = new CalendarRepository(new CalendarDAO());
+$logic = new MicroprocessorLogic();
 
 printHeader("Entsorgungskalenderanzeige");
 ?>
@@ -45,7 +46,7 @@ print htmlspecialchars(print_r($DB->getHelloWorld()));
 $result =
     htmlspecialchars
     (
-        getPlainTextStringForMicroprocessor
+        $logic->getPlainTextStringForMicroprocessor
         (
             $DB,
             isset($_GET["circleId"]) ? filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS) : ""

@@ -2,25 +2,24 @@
 
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
-         >
-<testsuites>
-    <testsuite name="Object_Freezer">
-        <directory suffix="Test.php">tests</directory>
-    </testsuite>
-</testsuites>
+>
+    <testsuites>
+        <testsuite name="Test">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
 
-<logging>
-    <log type="coverage-clover" target="build/logs/clover.xml"/>
-    <log type="junit" target="build/logs/junit.xml" />
-</logging>
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="junit" target="build/logs/junit.xml"/>
+    </logging>
 
-<filter>
-    <whitelist addUncoveredFilesFromWhitelist="true">
-        <directory suffix=".php">www/entsorgungskalenderanzeige</directory>
-        <exclude>
-            <file>www/entsorgungskalenderanzeige/connect.sample.php</file>
-            <directory>vendor</directory>
-        </exclude>
-    </whitelist>
-</filter>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">www/entsorgungskalenderanzeige</directory>
+            <exclude>
+                <file>www/entsorgungskalenderanzeige/connect.sample.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>

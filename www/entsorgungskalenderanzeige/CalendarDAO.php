@@ -52,7 +52,7 @@ class CalendarDAO
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            print $e->getMessage();
+            print htmlspecialchars($e->getMessage());
         }
         return null;
     }

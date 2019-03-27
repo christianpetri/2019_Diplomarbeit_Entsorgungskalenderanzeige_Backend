@@ -71,11 +71,13 @@ class CalendarRepositoryTest extends TestCase
         $_dao->method('getCheckIfCircleIdExists')
             ->willReturn('1');
 
+
         try {
             $this->_db = new CalendarRepository($_dao);
         } catch (Error $e) {
-            echo $e;
+            print htmlspecialchars($e->getMessage());
         }
+
     }
 
     /**
@@ -154,6 +156,4 @@ class CalendarRepositoryTest extends TestCase
         $this->assertEquals('100000', $event);
 
     }
-
-
 }
