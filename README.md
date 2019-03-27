@@ -1,5 +1,7 @@
 # 2019 Diplomarbeit Entsorgungskalenderanzeige Webseite
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/61a1926ed0d644b3ae34f0d7c89fa6eb)](https://app.codacy.com/app/christianpetri/2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite?utm_source=github.com&utm_medium=referral&utm_content=christianpetri/2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite&utm_campaign=Badge_Grade_Dashboard)
+
 # Einleitung
 Die Anwendung verfügt über /plain  als API-Option
 
