@@ -18,6 +18,6 @@ print htmlspecialchars(
    $logic->getPlainTextStringForMicroprocessor
     (
         $database,
-        isset($_GET["circleId"]) ? $_GET["circleId"] : ""
+       isset($_GET["circleId"]) ? filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS) : ""
     )
 );

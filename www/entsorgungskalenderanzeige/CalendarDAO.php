@@ -120,7 +120,7 @@ class CalendarDAO
      * @param $circle_id
      * @return array|null
      */
-    public function getCheckIfCircleIdExists($circle_id)
+    public function getCheckIfCircleIdExistsInTheDB($circle_id)
     {
         try {
             $stmt = $this->_pdo->prepare('

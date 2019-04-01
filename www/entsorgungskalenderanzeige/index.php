@@ -7,7 +7,7 @@ include_once "CalendarDAO.php";
 $DB = new CalendarRepository(new CalendarDAO());
 
 printHeader("Entsorgungskalender");
-?>
+?>  <a href="/test" target="_blank">Testseite</a>
     <h1>Entsorgungskalender</h1>
     <h2>Die nächsten 30 Kalendereinträge</h2>
 <?php

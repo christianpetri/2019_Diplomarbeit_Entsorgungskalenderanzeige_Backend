@@ -52,8 +52,8 @@ class CalendarRepository
      * @param $circle_id
      * @return array|null
      */
-    public function getCheckIfCircleIdExists($circle_id)
+    public function getCheckIfCircleIdExistsInTheDB($circle_id)
     {
-        return $this->_dao->getCheckIfCircleIdExists($circle_id);
+        return $this->_dao->getCheckIfCircleIdExistsInTheDB($circle_id);
     }
 }

@@ -18,7 +18,7 @@ class MicroprocessorLogic
      * @param $circle_id
      * @return string
      */
-    public function getPlainTextStringForMicroprocessor($database, $circle_id = '')
+    public function getPlainTextStringForMicroprocessor($database, $circle_id = ''):string
     {
         if ($circle_id != "") {
             /** @var CalendarRepository $database */
@@ -39,5 +39,16 @@ class MicroprocessorLogic
             return $html;
         }
         return "200000";
+    }
+
+    public function getCheckIfCircleIdExists($database, $circle_id = ''):string
+    {
+        if ($circle_id != "") {
+            /** @var CalendarRepository $database */
+            $result = $database->getCheckIfCircleIdExistsInTheDB($circle_id);
+            return htmlspecialchars($result[0]['result']);
+        } else {
+            return "0";
+        }
     }
 }
