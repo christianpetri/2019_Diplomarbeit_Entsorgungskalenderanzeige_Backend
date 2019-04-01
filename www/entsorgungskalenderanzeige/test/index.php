@@ -14,32 +14,31 @@ printHeader("Entsorgungskalenderanzeige");
     <h2>
         Database
     </h2>
-    <div>Connected to the database, if the connection String is correctly provided -->
-        <br/> Expected result along the lines of: Array ( [0] => Array ( [@@version] => 5.6.34-log ) ) 1
+    <div>Verbunden mit der Datenbank, wenn die Verbindungszeichenfolge korrekt angegeben ist -> -->
+        <br/>Erwartetes Ergebnis im Sinne von: Array ([0] => Array ([@@ version] => 5.6.34-log)) 1
     </div>
     <div>---------------------- Start-------------</div>
 <?php
 print htmlspecialchars(print_r($DB->getHelloWorld()));
 ?>
-    <div>---------------------- End-------------</div>
+    <div>---------------------- Ende-------------</div>
     <h2>/plain</h2>
-    <div>If you want to check /plain, provide a circleId via GET request. e.g. test/?circleId=3</div>
-    <div>Note: At the start of the sequence is always a 1 (or a 2) (1=successfully checked the calendar, 2=Error calling
-        the calendar).
-        <br/>The following 0 and 1s are "booleans" to indicate, if the waste can be put outside
+    <div>Wenn Sie prüfen möchten, geben Sie eine Kreis-ID über einen GET-Request an. z.B. test/?circleId=3</div>
+    <div>Hinweis: Am Anfang der Sequenz steht immer eine 1 (oder eine 2) (1 = Kalender erfolgreich geprüft, 2 = Fehler beim Aufrufen des Kalenders).
+        <br/>Die folgenden 0 und 1 sind "booleans", um anzuzeigen, ob der Abfall nach draussen gebracht werden kann.
     </div>
 
-    <h3>If you <strong>don't</strong> provide the circleId. </h3>
-    <div>Expected Result: 200000</div>
+    <h3>Wenn Sie die circleId <strong>nicht</strong> angeben.</h3>
+    <div>Erwartetes Ergebnis: 200000</div>
 
-    <h3>If you provide the circleId.</h3>
+    <h3>Wenn Sie die circleId angeben.</h3>
     <div>
-    </div>        Expected Result: (Note: the <strong> => 0</strong> changes accordingly to 1, if it is time to put the waste outside.)
+    </div>Erwartetes Ergebnis: (Hinweis: Das <strong> 0 </strong> ändert sich entsprechend zu 1, wenn es Zeit ist, den Abfall nach draussen zu bringen.)
 
     <div>
-        How the Backend get is from the database: Array ( [0] => Array ( [greenWaste] => 0 [cardboard] => 0
+        Wie das Frontend die Daten vom Backend erhält: Array ( [0] => Array ( [greenWaste] => 0 [cardboard] => 0
         [garbageAndBulkyGoods] => 0 [metal] => 0 [paper] => 0 ) ) 1 <br/>
-        What the microcontoller receives: 100000
+        Was das Frontend (der Mikrocontroller) erhält: 100000
     </div>
     <div>---------------------- Start-------------</div>
 <?php
@@ -54,6 +53,6 @@ $result =
     );
 print $result;
 ?>
-    <div>---------------------- End-------------</div>
+    <div>---------------------- Ende-------------</div>
 <?php
 printFooter();
