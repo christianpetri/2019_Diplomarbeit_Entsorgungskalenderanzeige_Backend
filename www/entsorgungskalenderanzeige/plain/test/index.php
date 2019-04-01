@@ -15,7 +15,6 @@ include_once "../../CalendarDAO.php";
 
 $DB = new CalendarRepository(new CalendarDAO());
 
-
 header("Content-Type: text/plain");
 
 print htmlspecialchars
@@ -23,6 +22,6 @@ print htmlspecialchars
     $logic->getCheckIfCircleIdExists
     (
         $DB,
-        isset($_GET["circleId"]) ? filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS) : ""
+        filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS)
     )
 );

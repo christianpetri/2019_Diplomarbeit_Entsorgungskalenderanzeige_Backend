@@ -47,8 +47,7 @@ class MicroprocessorLogic
             /** @var CalendarRepository $database */
             $result = $database->getCheckIfCircleIdExistsInTheDB($circle_id);
             return htmlspecialchars($result[0]['result']);
-        } else {
-            return "0";
         }
+        return "0";
     }
 }

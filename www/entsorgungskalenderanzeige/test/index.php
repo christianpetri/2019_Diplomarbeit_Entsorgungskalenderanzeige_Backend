@@ -92,7 +92,7 @@ print htmlspecialchars
     $logic->getPlainTextStringForMicroprocessor
     (
         $DB,
-        isset($_GET[CIRCLE_ID]) ? filter_input(INPUT_GET, CIRCLE_ID, FILTER_SANITIZE_SPECIAL_CHARS) : ""
+        filter_input(INPUT_GET, CIRCLE_ID, FILTER_SANITIZE_SPECIAL_CHARS)
     )
 );
 ?>
@@ -117,7 +117,7 @@ print htmlspecialchars
     $logic->getCheckIfCircleIdExists
     (
         $DB,
-        isset($_GET[CIRCLE_ID]) ? filter_input(INPUT_GET, CIRCLE_ID, FILTER_SANITIZE_SPECIAL_CHARS) : ""
+        filter_input(INPUT_GET, CIRCLE_ID, FILTER_SANITIZE_SPECIAL_CHARS)
     )
 );
 ?>
