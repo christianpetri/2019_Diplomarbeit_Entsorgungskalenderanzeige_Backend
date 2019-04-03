@@ -9,19 +9,19 @@ Verwendung von /plain
 Anforderungs-URL: [https://www.entsorgungskalenderanzeige.christianpetri.ch/plain/?circle_id=6](https://www.entsorgungskalenderanzeige.christianpetri.ch/plain/?circle_id=6)
 Anforderungsmethode: GET
 
-|Kreis_ID|Kreisbeschreibung|
-|----------|:-------------:|
-|1|1|
-|2|1a|
-|3|1b|
-|4|2|
-|5|3|
-|6|4|
-|7|5|
-|8|6|
-|9|7|
-|10|8|
-|11|9|
+|Kreis_ID  |Kreisbeschreibung|
+| -------- | --------------- |
+|1         |1                |
+|2         |1a               |
+|3         |1b               |
+|4         |2                |
+|5         |3                |
+|6         |4                |
+|7         |5                |
+|8         |6                |
+|9         |7                |
+|10        |8                |
+|11        |9                |
 
 Beispiel Antwort: **100100**  
 Content-Type: text/plain;charset=UTF-8
@@ -58,6 +58,7 @@ und so weiter
 1. Installieren Sie den Sonar-Client
   [How to install SonarQube Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
 2. Um den Code zur Analyse in die Sonar-Cloud zu verschieben, verwenden Sie bitte den folgenden Befehl  
+
 ```
 sonar-scanner
 ```

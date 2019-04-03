@@ -1,12 +1,14 @@
 <?php
-include_once "common.php";
+include_once "Common.php";
 
 include_once "CalendarRepository.php";
 include_once "CalendarDAO.php";
 
-$DB = new CalendarRepository(new CalendarDAO());
 
-printHeader("Entsorgungskalender");
+$DB = new CalendarRepository(new CalendarDAO());
+$common = new Common();
+
+$common->printHeader("Entsorgungskalender");
 ?>  <a href="/test" target="_blank">Testseite</a>
     <h1>Entsorgungskalender</h1>
     <h2>Die nächsten 30 Kalendereinträge</h2>
@@ -29,4 +31,5 @@ foreach ($result as $key => $value) {
 // finish table and return it
 $html .= '</table>';
 print $html;
-printFooter();
+$common->printFooter();
+// @codeCoverageIgnoreEnd

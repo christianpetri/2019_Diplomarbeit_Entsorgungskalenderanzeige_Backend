@@ -18,7 +18,7 @@
   },
   "autoload": {
     "classmap": [
-      "www/entsorgungskalenderanzeige"
+      "www/entsorgungskalenderanzeige/"
     ]
   }
 }

@@ -1,5 +1,5 @@
 <?php
-include_once "../common.php";
+include_once "../Common.php";
 include_once "../plain/MicroprocessorLogic.php";
 
 include_once "../CalendarRepository.php";
@@ -8,9 +8,11 @@ include_once "../CalendarDAO.php";
 $DB = new CalendarRepository(new CalendarDAO());
 $logic = new MicroprocessorLogic();
 
+$common = new Common();
+
 define("CIRCLE_ID", "circleId");
 
-printHeader("Entsorgungskalenderanzeige");
+$common->printHeader("Entsorgungskalenderanzeige");
 ?>
     <h1>Testseite</h1>
     <h2>
@@ -123,4 +125,4 @@ print htmlspecialchars
 ?>
     <div>---------------------- Ende-------------</div>
 <?
-printFooter();
+$common->printFooter();

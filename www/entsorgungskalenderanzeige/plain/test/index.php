@@ -13,7 +13,7 @@ $logic = new MicroprocessorLogic();
 include_once "../../CalendarRepository.php";
 include_once "../../CalendarDAO.php";
 
-$DB = new CalendarRepository(new CalendarDAO());
+$database = new CalendarRepository(new CalendarDAO());
 
 header("Content-Type: text/plain");
 
@@ -21,7 +21,7 @@ print htmlspecialchars
 (
     $logic->getCheckIfCircleIdExists
     (
-        $DB,
+        $database,
         filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS)
     )
 );

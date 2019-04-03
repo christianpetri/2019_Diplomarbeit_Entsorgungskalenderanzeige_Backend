@@ -30,7 +30,7 @@ class CalendarRepositoryTest extends TestCase
                     'getHelloWorld',
                     'getCalendarEntries',
                     'getPlainTextStringForMicroprocessorFromDB',
-                    'getCheckIfCircleIdExists'
+                    'getCheckIfCircleIdExistsInTheDB'
                 )
             )
             ->getMock();
@@ -68,7 +68,7 @@ class CalendarRepositoryTest extends TestCase
             ->with(1)
             ->willReturn('100000');
 
-        $_dao->method('getCheckIfCircleIdExists')
+        $_dao->method('getCheckIfCircleIdExistsInTheDB')
             ->willReturn('1');
 
 
@@ -77,17 +77,16 @@ class CalendarRepositoryTest extends TestCase
         } catch (Error $e) {
             print htmlspecialchars($e->getMessage());
         }
-
     }
 
     /**
      *
      */
-    public function testGetCheckIfCircleIdExists()
+    public function testGetCheckIfCircleIdExistsInTheDB()
     {
         $repo = new CalendarRepository($this->_db);
 
-        $event = $repo->getCheckIfCircleIdExists(1);
+        $event = $repo->getCheckIfCircleIdExistsInTheDB(1);
 
         $this->assertEquals(true, $event);
     }

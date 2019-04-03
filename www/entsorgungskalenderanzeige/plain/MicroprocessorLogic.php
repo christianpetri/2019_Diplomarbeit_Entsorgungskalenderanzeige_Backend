@@ -31,7 +31,6 @@ class MicroprocessorLogic
                 $isGarbageDue[$result[$key]['garbageTypeId']] = true;
             }
 
-            //start
             $html = "1"; //to start the sequence
             for ($i = 1; $i < 6; $i++) {
                 $html .= htmlspecialchars($isGarbageDue[$i] ? "1" : "0");
