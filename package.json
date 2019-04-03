@@ -1,0 +1,33 @@
+{
+  "name": "2019_diplomarbeit_entsorgungskalenderanzeige_webseite",
+  "version": "1.0.0",
+  "description": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/61a1926ed0d644b3ae34f0d7c89fa6eb)](https://app.codacy.com/app/christianpetri/2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite?utm_source=github.com&utm_medium=referral&utm_content=christianpetri/2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite&utm_campaign=Badge_Grade_Dashboard)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "remark-cli": "^6.0.1",
+    "remark-lint": "^6.0.4",
+    "remark-preset-lint-recommended": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-md": "remark ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianpetri/2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite.git"
+  },
+  "author": "Christian Petri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christianpetri/2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite/issues"
+  },
+  "homepage": "https://github.com/christianpetri/2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite#readme",
+  "remarkConfig": {
+    "plugins": ["remark-preset-lint-recommended"]
+  },
+  "filesToIgnore": ["vendor/**/*"]
+}

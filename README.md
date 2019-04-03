@@ -10,7 +10,7 @@ Anforderungs-URL: [https://www.entsorgungskalenderanzeige.christianpetri.ch/plai
 Anforderungsmethode: GET
 
 |Kreis_ID  |Kreisbeschreibung|
-| -------- | --------------- |
+|:---------|----------------:|
 |1         |1                |
 |2         |1a               |
 |3         |1b               |
