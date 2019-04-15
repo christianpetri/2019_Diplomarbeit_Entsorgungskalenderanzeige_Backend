@@ -9,7 +9,6 @@
 Die Schnittstelle hat ihren Namen aus dem englischen "content-type: text/plain" auf Deutsch "Inhaltstyp: Klartext" erhalten.  
 Er bietet dem Frontend die Möglichkeit den aktuellen Status, ob die Entsorgungsgüter an die Strasse gestellt werden dürfen, abzurufen.  
 
-
 In der folgenden Tabelle sind die verfügbaren Optionen der API dargestellt:
 
 |URL         |Methode|Parameter|Inhaltstyp|Beschreibung                |Beispiel Resultat|
@@ -46,7 +45,6 @@ Content-Type: text/plain;charset=UTF-8
 Die erste Zahl ist immer 1, gefolgt von 5 Zahlen, die einen Booleschen Wert darstellen
 
 1 = wahr, 0 = falsch // 1 = LED ist EIN, 0 = LED ist AUS
-
 
 Die Anwort **101100** bedeutet folgendes:  
 `[1] [0] [1] [1] [0] [0]`  
@@ -87,6 +85,6 @@ Unter `/test` z.B. [https://www.entsorgungskalenderanzeige.christianpetri.ch/tes
   [How to install SonarQube Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
 2. Um den Code zur Analyse in die Sonar-Cloud zu verschieben, verwenden Sie bitte den folgenden Befehl  
 
-```
+```console 
 sonar-scanner
 ```
