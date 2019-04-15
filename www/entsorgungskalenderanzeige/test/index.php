@@ -12,12 +12,13 @@ $common = new Common();
 
 define("CIRCLE_ID", "circleId");
 
-$common->printHeader("Entsorgungskalenderanzeige");
+print $common->printHeader("Testseite");
 ?>
     <h1>Testseite</h1>
-    <h2>
+    <h2>Datenbank</h2>
+    <p>
         Ist die Datenbank für das Backend richtig konfiguriert?
-    </h2>
+    </p>
     <div>Verbunden mit der Datenbank, wenn die Verbindungszeichenfolge (URL zur Datenbank, Benutzername, Passwort,
         Datenbankname) korrekt angegeben ist &rarr;
         <br/>Erwartetes Ergebnis im Sinne von: Array ([0] => Array ([@@ version] => 5.6.34-log)) 1
@@ -27,12 +28,68 @@ $common->printHeader("Entsorgungskalenderanzeige");
 print htmlspecialchars(print_r($DB->getHelloWorld()));
 ?>
     <div>---------------------- Ende-------------</div>
-    <h2><strong>Programmschnittstelle (API) für das Frontend</strong></h2>
-    <h2>/plain</h2>
-    <p>Die Schnittstelle hat ihren Namen aus dem englischen "content-type: text/plain" auf Deutsche "Inhaltstyp:
-        Klartext" erhalten.
-        Er bietet dem Frontend die Möglichkeit den aktuellen Status, ob die Entsorgungsgüter an die Strasse gestellt
+    <hr/>
+    <h2><strong>Tests für das API für das Frontend</strong></h2>
+    <h2>Einleitung /plain/*</h2>
+    <p> Es bietet dem Frontend die Möglichkeit den aktuellen Status, ob die Entsorgungsgüter an die Strasse gestellt
         werden dürfen, abzurufen.</p>
+    <p>Jeder Kreis der Gemeinde hat eine ID und einen Kreisnamen: Bitte tragen Sie die korrekte Kreis-ID (circleID) für
+        Ihren Kreis im Code des Frontends an.</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Kreis-ID</th>
+            <th>Kreisnamen</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1a</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>1b</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>9</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>In der folgenden Tabelle sind die verfügbaren Optionen der API dargestellt:</p>
     <table>
         <thead>
         <tr>
@@ -63,11 +120,12 @@ print htmlspecialchars(print_r($DB->getHelloWorld()));
         </tr>
         </tbody>
     </table>
-    <h3>Tests für /plain</h3>
-    <div>Wenn Sie /plain prüfen möchten, geben Sie eine Kreis-ID über einen GET-Request an. z.B. <a
-                href="/test/?circleId=3">test/?circleId=3</a></div>
-    <p>Link der erfolgreich sein sollte <a href="/test/?circleId=3"> /test/?circleId=3</a></p>
-    <p>Link der nicht erfolgreich sein sollte <a href="/test/"> /test/</a></p>
+
+    <h3>Tests für /plain/</h3>
+    <div>Wenn Sie /plain/ prüfen möchten, geben Sie eine Kreis-ID über einen GET-Request an. z.B. <a
+                href="/test/?circleId=3">/test/?circleId=3</a></div>
+    <p>Link der erfolgreich sein sollte <a href="/test/?circleId=3">/test/?circleId=3</a></p>
+    <p>Link der nicht erfolgreich sein sollte <a href="/test/">/test/</a></p>
     <p>Direkt Link für das Frontend: <a href="/plain/?circleId=3"> plain/?circleId=3</a></div></p>
     <div>Hinweis: Am Anfang der Sequenz steht immer eine 1 (oder eine 2) (1 = Kalender erfolgreich geprüft, 2 = Fehler
         beim Aufrufen des Kalenders).
@@ -106,7 +164,7 @@ print htmlspecialchars
     <p>Link der erfolgreich sein sollte <a href="/test/?circleId=7"> /test/?circleId=7</a></p>
     <p>Link der nicht erfolgreich sein sollte <a href="/test/?circleId=99"> /test/?circleId=99</a></p>
     <p>Link der nicht erfolgreich sein sollte <a href="/test/"> /test</a></p>
-    <p>Direkt Link für das Fronend: <a href="/plain/test/?circleId=3"> /plain/test/?circleId=3</a></p>
+    <p>Direkt Link für das Frontend: <a href="/plain/test/?circleId=3"> /plain/test/?circleId=3</a></p>
 
 
     <p>Erwartetes Ergebnis bei Erfolg (Kreis-ID ist korrekt konfiguriert): 1</p>
@@ -125,4 +183,4 @@ print htmlspecialchars
 ?>
     <div>---------------------- Ende-------------</div>
 <?
-$common->printFooter();
+print $common->printFooter();
