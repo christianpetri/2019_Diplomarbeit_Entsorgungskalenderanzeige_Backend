@@ -25,3 +25,4 @@ print htmlspecialchars
         filter_input(INPUT_GET, 'circleId', FILTER_SANITIZE_SPECIAL_CHARS)
     )
 );
+print "\n";

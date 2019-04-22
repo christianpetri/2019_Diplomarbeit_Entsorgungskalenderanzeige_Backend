@@ -8,4 +8,5 @@
 
 header("Content-Type: text/plain");
 
-print htmlspecialchars(101111);
+print htmlspecialchars(110000);
+print "\n";
