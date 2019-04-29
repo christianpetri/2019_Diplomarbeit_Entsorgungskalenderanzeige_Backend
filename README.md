@@ -42,7 +42,7 @@ Anforderungsmethode: GET
 Beispiel Antwort: **100100**  
 Content-Type: text/plain;charset=UTF-8
 
-Die erste Zahl ist immer 1, gefolgt von 5 Zahlen, die einen Booleschen Wert darstellen
+Die erste Zahl ist immer 1, gefolgt von fünft Zahlen, die einen Booleschen Wert darstellen
 
 1 = wahr, 0 = falsch // 1 = LED ist EIN, 0 = LED ist AUS
 
