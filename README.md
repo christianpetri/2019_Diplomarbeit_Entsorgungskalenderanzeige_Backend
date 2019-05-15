@@ -42,24 +42,26 @@ Anforderungsmethode: GET
 Beispiel Antwort: **100100**  
 Content-Type: text/plain;charset=UTF-8
 
-Die erste Zahl ist immer 1, gefolgt von fünft Zahlen, die einen Booleschen Wert darstellen
+Hinweis: Am Anfang der Sequenz steht immer eine 1 (oder eine 2) (1 = Kalender erfolgreich geprüft, 2 = Fehler beim Aufrufen des Kalenders).
+Die folgenden 0 und 1 sind "booleans", um anzuzeigen, ob der Abfall nach draussen gebracht werden kann.  
 
 1 = wahr, 0 = falsch // 1 = LED ist EIN, 0 = LED ist AUS
 
 Die Anwort **101100** bedeutet folgendes:  
 `[1] [0] [1] [1] [0] [0]`  
 `[1] ["Grüngut"] ["Karton"] ["Kehricht und Sperrgut"] ["Metall"] ["Papier"]`  
-Die erste Zahl steht für nichts, es ist ein Platzhalter, um die Sequenz zu starten  
 
-Die zweite Zahl steht für grünen Abfall.  
+Die erste Zahl steht für nichts, es ist ein Platzhalter, um die Sequenz zu starten  
+Die zweite Zahl steht für Grüngut.  
 Die dritte Zahl steht für Karton.  
-Die vierte Zahl steht für allgemeiner Abfall und Sperrgut.  
-Die fünfte Zahl steht für Metallabfälle.  
-Die Nummer sechs steht für Papierabfall.  
+Die vierte Zahl steht für Kehricht und Sperrgut.  
+Die fünfte Zahl steht für Metall.  
+Die sechste Zahl steht für Papier.  
+ 
 
 istHeuteGrünAbfuhr = 0 = falsch -> Licht ist aus  
 istHeuteKartonAbfuhr = 1 = wahr -> Licht ist an  
-istHeuteAllgemeinerAbfallundSperrgutAbfuhr = 1 = wahr -> Licht ist an  
+istHeuteKehrichtUndSperrgutAbfuhr = 1 = wahr -> Licht ist an  
 istHeuteMetallAbfuhr = 0 = falsch -> Licht ist aus  
 istHeutePapierAbfuhr = 0 = falsch -> Licht ist aus  
 
@@ -67,7 +69,7 @@ Diese Informationen auf der Anzeige dargestelle, könnte folgendermassen Aussehe
 ![Anzeige](image/Anzeige_beleuchtet.png)
 
 #### Verwendung von /plain/test
-Wenn Sie prüfen möchten, ob die Kreis-ID (im Backend) tatsächlich existiert. Geben Sie eine Kreis-ID über einen GET-Request an.
+Wenn Sie prüfen möchten, ob die Kreis-ID (im Backend) tatsächlich existiert, geben Sie eine Kreis-ID über einen GET-Request an.
 
 URL: `plain/test/?circleId=6`  
 Anforderungs-URL: [https://www.entsorgungskalenderanzeige.christianpetri.ch/plain/test/?circleId=6](https://www.entsorgungskalenderanzeige.christianpetri.ch/plain/test/?circleId=6)  
