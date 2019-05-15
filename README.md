@@ -42,6 +42,9 @@ Anforderungsmethode: GET
 Beispiel Antwort: **100100**  
 Content-Type: text/plain;charset=UTF-8
 
+Hinweis: Am Anfang der Sequenz steht immer eine 1 (oder eine 2) (1 = Kalender erfolgreich geprüft, 2 = Fehler beim Aufrufen des Kalenders).  
+Die folgenden 0 und 1 sind "booleans", um anzuzeigen, ob der Abfall nach draussen gebracht werden kann. 1 = wahr, 0 = falsch // 1 = LED ist EIN, 0 = LED ist AUS.  
+
 Die erste Zahl ist immer 1, gefolgt von fünft Zahlen, die einen Booleschen Wert darstellen
 
 1 = wahr, 0 = falsch // 1 = LED ist EIN, 0 = LED ist AUS
