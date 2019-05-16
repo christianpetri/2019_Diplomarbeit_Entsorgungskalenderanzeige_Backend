@@ -13,7 +13,7 @@ In der folgenden Tabelle sind die verfügbaren Optionen der API dargestellt:
 
 |URL         |Methode|Parameter|Inhaltstyp|Beschreibung                |Beispiel Resultat|
 |------------|-------|---------|----------|----------------------------|-----------------|
-|/plain/     |GET	 |circleId |text/plain|Ist Abfuhr, wenn ja, welche?|100100           |
+|/plain/     |GET	   |circleId |text/plain|Ist Abfuhr, wenn ja, welche?|100100           |
 |/plain/test/|GET    |circleId |text/plain|Ist die Kreis-ID korrekt?   |1                |
 
 In der Gemeinde Rapperswil-Jona liegen folgenden Kreise vor (Stand 2019):  
@@ -58,7 +58,6 @@ Die vierte Zahl steht für Kehricht und Sperrgut.
 Die fünfte Zahl steht für Metall.  
 Die sechste Zahl steht für Papier.  
  
-
 istHeuteGrünAbfuhr = 0 = falsch -> Licht ist aus  
 istHeuteKartonAbfuhr = 1 = wahr -> Licht ist an  
 istHeuteKehrichtUndSperrgutAbfuhr = 1 = wahr -> Licht ist an  
@@ -83,16 +82,14 @@ Unter `/test` z.B. [https://www.entsorgungskalenderanzeige.christianpetri.ch/tes
 ## Aufsetzen der Webseite
 Voraussetzung: Server der mit PHP umgehen kann.
 Eine Datenbank die SQL verarbeiten kann.
-
 1.  Datenbank aussetzten
-2.  Die Scripts, die im Ordner SQL liegen, in der Datenbank laufen lassen:
-a.  create_tables.sql 
-b.  insert_data_into_tables_*year*.sql
-3.  Die Datei von www/entsorgungskalenderanzeige/connect.sample.php in www/entsorgungskalenderanzeige/connect.php umbennen.
+2.  Die Scripts, die im Ordner SQL liegen, in der Datenbank laufen lassen:  
+  a.  create_tables.sql  
+  b.  insert_data_into_tables_*year*.sql  
+3.  Die Datei von www/entsorgungskalenderanzeige/connect.sample.php in www/entsorgungskalenderanzeige/connect.php umbennen.  
 4. 	Die Datei www/entsorgungskalenderanzeige/connect.php öffnen und die Zugangsdaten der Datenbank eingeben.
 5. 	Die Dateien und Ordner aus dem Order www/entsorgungskalenderanzeige/ in den publiken Ordner des Servers ziehen.
-6. 	Die Seite yourdomain.com/test aufrufen. Wenn alles funktioniert hat, sollte dies hier ersichtlich sein.
-
+6.  Die Seite yourdomain.com/test aufrufen. Wenn alles funktioniert hat, sollte dies hier ersichtlich sein.
 
 ## Sonar
    Dieses Projekt verwendet die SonarCloud, um den Code zu überprüfen. Bitte besuchen Sie den Link unten, um die Analyse zu sehen<br/>
@@ -101,7 +98,6 @@ b.  insert_data_into_tables_*year*.sql
 1. Installieren Sie den Sonar-Client
   [How to install SonarQube Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
 2. Um den Code zur Analyse in die Sonar-Cloud zu verschieben, verwenden Sie bitte den folgenden Befehl  
-
 ```console 
 sonar-scanner
 ```
