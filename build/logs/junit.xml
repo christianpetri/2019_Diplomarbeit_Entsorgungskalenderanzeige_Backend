@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests" tests="8" assertions="10" errors="0" failures="0" skipped="0" time="0.811014">
-    <testsuite name="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.693531">
-      <testcase name="testGetCheckIfCircleIdExistsInTheDB" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="85" assertions="1" time="0.639476"/>
-      <testcase name="testGetCalendarEntries" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="97" assertions="1" time="0.014667"/>
-      <testcase name="testGetHelloWorld" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="135" assertions="1" time="0.017490"/>
-      <testcase name="testGetPlainTextStringForMicroprocessorFromDB" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="148" assertions="1" time="0.021898"/>
+  <testsuite name="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests" tests="8" assertions="10" errors="0" failures="0" skipped="0" time="0.241125">
+    <testsuite name="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.186035">
+      <testcase name="testGetCheckIfCircleIdExistsInTheDB" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="85" assertions="1" time="0.062040"/>
+      <testcase name="testGetCalendarEntries" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="97" assertions="1" time="0.067037"/>
+      <testcase name="testGetHelloWorld" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="135" assertions="1" time="0.029615"/>
+      <testcase name="testGetPlainTextStringForMicroprocessorFromDB" class="CalendarRepositoryTest" classname="CalendarRepositoryTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CalendarRepositoryTest.php" line="148" assertions="1" time="0.027343"/>
     </testsuite>
-    <testsuite name="CommonTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CommonTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.035462">
-      <testcase name="testPrintHeader" class="CommonTest" classname="CommonTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CommonTest.php" line="14" assertions="1" time="0.026660"/>
-      <testcase name="testPrintFooter" class="CommonTest" classname="CommonTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CommonTest.php" line="24" assertions="1" time="0.008802"/>
+    <testsuite name="CommonTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CommonTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.008392">
+      <testcase name="testPrintHeader" class="CommonTest" classname="CommonTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CommonTest.php" line="14" assertions="1" time="0.004153"/>
+      <testcase name="testPrintFooter" class="CommonTest" classname="CommonTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\CommonTest.php" line="24" assertions="1" time="0.004239"/>
     </testsuite>
-    <testsuite name="MicroprocessorLogicTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\MicroprocessorLogicTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.082021">
-      <testcase name="testGetPlainTextStringForMicroprocessor" class="MicroprocessorLogicTest" classname="MicroprocessorLogicTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\MicroprocessorLogicTest.php" line="86" assertions="2" time="0.055613"/>
-      <testcase name="testGetCheckIfCircleIdExists" class="MicroprocessorLogicTest" classname="MicroprocessorLogicTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\MicroprocessorLogicTest.php" line="98" assertions="2" time="0.026408"/>
+    <testsuite name="MicroprocessorLogicTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\MicroprocessorLogicTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.046698">
+      <testcase name="testGetPlainTextStringForMicroprocessor" class="MicroprocessorLogicTest" classname="MicroprocessorLogicTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\MicroprocessorLogicTest.php" line="86" assertions="2" time="0.024617"/>
+      <testcase name="testGetCheckIfCircleIdExists" class="MicroprocessorLogicTest" classname="MicroprocessorLogicTest" file="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\tests\MicroprocessorLogicTest.php" line="98" assertions="2" time="0.022081"/>
     </testsuite>
   </testsuite>
 </testsuites>
