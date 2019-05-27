@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1555963477">
-  <project timestamp="1555963477">
+<coverage generated="1558941979">
+  <project timestamp="1558941979">
     <file name="C:\Users\-\PhpstormProjects\2019_Diplomarbeit_Entsorgungskalenderanzeige_Webseite\www\entsorgungskalenderanzeige\CalendarDAO.php">
       <class name="CalendarDAO" namespace="global">
         <metrics complexity="16" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="12" elements="42" coveredelements="12"/>

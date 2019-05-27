@@ -101,3 +101,33 @@ Eine Datenbank die SQL verarbeiten kann.
 ```console 
 sonar-scanner
 ```
+## Deklaration der Dateien
+## selbst erzeugt
+image/Anzeige_beleuchtet.png  
+
+### von Too erzeugt / übernommen, aber abgeändert
+tests/CalendarRepositoryTest.php  
+tests/CommonTest.php  
+tests/MicroprocessorLogicTest.php  
+www/entsorgungskalenderanzeige/plain/demo/index.php  
+www/entsorgungskalenderanzeige/plain/test/index.php  
+www/entsorgungskalenderanzeige/plain/index.php  
+www/entsorgungskalenderanzeige/plain/MicroprocessorLogic.php  
+www/entsorgungskalenderanzeige/test/index.php  
+www/entsorgungskalenderanzeige/CalendarDAO.php  
+www/entsorgungskalenderanzeige/CalendarRepository.php  
+www/entsorgungskalenderanzeige/Common.php  
+www/entsorgungskalenderanzeige/connect.php  
+www/entsorgungskalenderanzeige/connect.sample.php  
+www/entsorgungskalenderanzeige/index.php  
+www/entsorgungskalenderanzeige/main.css
+.travis.yml  
+composer.json  
+phpunit.xml  
+README.md  
+
+### von Too erzeugt
+build/logs/clover.xml  
+build/logs/junit.xml  
+SQL/create_tables.sql 
+SQL/insert_data_into_tables_2019.sql  
